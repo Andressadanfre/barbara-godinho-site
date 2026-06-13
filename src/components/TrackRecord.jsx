@@ -59,7 +59,7 @@ const Metric = ({ metric, animate }) => {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <div className={`w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-4`}>
+      <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-4">
         <metric.icon className={`w-6 h-6 ${metric.color}`} />
       </div>
       <div className="text-3xl sm:text-4xl font-bold text-white mb-2 font-mono tracking-tight">
