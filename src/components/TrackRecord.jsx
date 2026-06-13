@@ -120,15 +120,13 @@ const TrackRecord = () => {
         </div>
 
         <motion.p
-          className="text-center text-xs text-slate-500 max-w-2xl mx-auto leading-relaxed"
+          className="text-center text-xs text-slate-300 max-w-2xl mx-auto leading-relaxed"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          * Dados referentes à atuação profissional anterior como analista em empresa de consultoria de investimentos.
-          Rentabilidades e patrimônios passados não garantem resultados futuros.
-          Informações de caráter exclusivamente referencial, em conformidade com a Resolução CVM 19/2021.
+          Dados relativos à atuação profissional em consultoria de investimentos. Volume de patrimônio sob gestão referente ao último ano. As informações apresentadas possuem caráter exclusivamente referencial, em conformidade com a Resolução CVM nº 19/2021.
         </motion.p>
       </div>
     </section>

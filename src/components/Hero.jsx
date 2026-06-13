@@ -54,7 +54,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Especialista em Valuation, Modelagem e Estratégia de Investimentos
+              Especialista em Valuation, Modelagem e Estratégia de Investimentos para Decisões Inteligentes
             </motion.p>
 
             <motion.p
