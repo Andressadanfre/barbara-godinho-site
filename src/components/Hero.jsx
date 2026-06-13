@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, BarChart3, Target, Award as AwardIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -36,7 +36,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Consultoria de Investimentos
-              <span className="block text-blue-200">Online para Pessoa Física</span>
+              <span className="block text-blue-200">Online para Pessoa FÃ­sica</span>
             </motion.h1>
 
             <motion.div
@@ -45,7 +45,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Bárbara Godinho • Analista CNPI Credenciada CVM • Atendimento Online
+              BÃ¡rbara Godinho â€¢ Analista CNPI Credenciada CVM â€¢ Atendimento Online
             </motion.div>
 
             <motion.p
@@ -54,8 +54,8 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Especialista em Valuation, Modelagem e Estratégia de Investimentos{' '}
-              para Decisões Inteligentes
+              Especialista em Valuation, Modelagem e EstratÃ©gia de Investimentos{' '}
+              para DecisÃµes Inteligentes
             </motion.p>
 
             <motion.p
@@ -65,8 +65,8 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               Analista CNPI credenciada pela CVM, especializada em consultoria de investimentos 
-              para pessoa física. Ajudo você a montar e acompanhar sua carteira com base em 
-              análise fundamentalista, valuation e estratégia personalizada — tudo online, 
+              para pessoa fÃ­sica. Ajudo vocÃª a montar e acompanhar sua carteira com base em 
+              anÃ¡lise fundamentalista, valuation e estratÃ©gia personalizada â€” tudo online, 
               em qualquer lugar do Brasil.
             </motion.p>
 
@@ -80,7 +80,7 @@ const Hero = () => {
                 onClick={scrollToContact}
                 className="bg-white text-blue-900 hover:bg-blue-50 text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
-                Solicitar uma análise
+                Solicitar uma anÃ¡lise
               </Button>
             </motion.div>
           </motion.div>
@@ -95,7 +95,7 @@ const Hero = () => {
             <div className="relative">
               <img  
                 className="w-full h-auto rounded-2xl shadow-2xl max-w-md mx-auto lg:max-w-full"
-                alt="Análise financeira profissional com gráficos e dados"
+                alt="AnÃ¡lise financeira profissional com grÃ¡ficos e dados"
                src="https://images.unsplash.com/photo-1620266757065-5814239881fd" />
               
               {/* Floating Cards */}
@@ -126,7 +126,7 @@ const Hero = () => {
                 transition={{ duration: 0.6, delay: 1.6 }}
               >
                 <Target className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mb-1 text-purple-400" />
-                <div className="text-[10px] sm:text-xs font-semibold">Estratégia</div>
+                <div className="text-[10px] sm:text-xs font-semibold">EstratÃ©gia</div>
               </motion.div>
             </div>
           </motion.div>
