@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, BarChart3, Target, Award as AwardIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
