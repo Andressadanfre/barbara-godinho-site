@@ -3,6 +3,7 @@ import Seo from '@/components/Seo';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import TrackRecord from '@/components/TrackRecord';
 import Services from '@/components/Services';
 import Simulator from '@/components/Simulator';
 import SubstackBanner from '@/components/SubstackBanner';
@@ -20,6 +21,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <TrackRecord />
         <Services />
         <Simulator />
         <SubstackBanner />
