@@ -1,4 +1,5 @@
 import React from 'react';
+import Seo from '@/components/Seo';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -9,10 +10,12 @@ import Differentials from '@/components/Differentials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import CookieBanner from '@/components/CookieBanner';
 
 function App() {
   return (
     <div className="min-h-screen">
+      <Seo />
       <Header />
       <main>
         <Hero />
@@ -25,6 +28,7 @@ function App() {
       </main>
       <Footer />
       <Toaster />
+      <CookieBanner />
     </div>
   );
 }
