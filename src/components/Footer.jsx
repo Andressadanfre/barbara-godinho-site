@@ -135,6 +135,24 @@ const Footer = () => {
           </motion.div>
         </div>
 
+        <motion.div
+          className="border-t border-slate-800 pt-6 pb-4 mt-0"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-xs text-slate-500 leading-relaxed text-center sm:text-left">
+            <strong className="text-slate-400">Aviso Legal:</strong> Bárbara Godinho é analista de valores mobiliários certificada CNPI
+            (EM-9901/APIMEC), credenciada pela CVM. As informações, análises e conteúdos disponibilizados
+            neste site têm caráter exclusivamente informativo e educacional, não constituindo oferta,
+            recomendação ou aconselhamento de investimento, compra ou venda de qualquer ativo financeiro.
+            Rentabilidades passadas não garantem resultados futuros. Antes de investir, avalie seus
+            objetivos, situação financeira e perfil de risco. Em caso de dúvidas, consulte um profissional
+            habilitado. Conforme CVM Resolução 19/2021.
+          </p>
+        </motion.div>
+
         <motion.div className="border-t border-slate-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left" initial={{
         opacity: 0
       }} whileInView={{
