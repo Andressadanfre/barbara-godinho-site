@@ -29,8 +29,8 @@ const About = () => {
         once: true
       }}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 mb-4 md:mb-6">
-            Rigor Técnico e 
-            <span className="text-gradient block">Visão Estratégica</span>
+            Analista de Investimentos CNPI
+            <span className="text-gradient block">Credenciada CVM • Atendimento Online</span>
           </h2>
         </motion.div>
 
@@ -49,14 +49,14 @@ const About = () => {
         }}>
             <div className="space-y-6 text-base sm:text-lg text-slate-700 leading-relaxed">
               <p>
-                Sou <strong>Analista CNPI</strong>, <strong>Consultora CVM</strong> com MBA pela USP/ESALQ e sólida atuação em equity research. 
-                Produzo relatórios com base em análise fundamentalista, modelagem financeira e tendências de mercado, com foco em consultoria para investimentos em bolsa.
+                Sou <strong>Analista de Investimentos CNPI</strong> e <strong>Consultora credenciada pela CVM</strong>, com MBA pela USP/ESALQ. 
+                Ofereço consultoria de investimentos online para pessoa física em todo o Brasil — desde a montagem da carteira até o acompanhamento contínuo, com base em análise fundamentalista e valuation.
               </p>
               
               <p>
-                Minha missão é traduzir dados complexos em estratégias práticas para criação de valor. 
-                Utilizo ferramentas modernas para entregar análises profundas, 
-                personalizadas e aplicáveis.
+                Minha missão é traduzir dados complexos em decisões claras e acionáveis. 
+                Cada cliente recebe uma estratégia personalizada, construída com rigor técnico 
+                e linguagem acessível — para você investir com mais segurança e menos ruído.
               </p>
             </div>
           </motion.div>
