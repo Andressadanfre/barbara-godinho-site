@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import PoliticaPrivacidade from '@/components/PoliticaPrivacidade';
 
 const CONSENT_KEY = 'bg_cookie_consent';
 
@@ -14,6 +15,7 @@ const pushConsentToGTM = (granted) => {
 
 const CookieBanner = () => {
   const [visible, setVisible] = useState(false);
+  const [showPolicy, setShowPolicy] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem(CONSENT_KEY);
@@ -52,7 +54,9 @@ const CookieBanner = () => {
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
               Usamos cookies para analisar o tráfego do site via Google Analytics e melhorar sua experiência.
               Sua escolha é salva e respeitada em visitas futuras, conforme a{' '}
-              <span className="underline text-blue-400">LGPD</span>.
+              <button onClick={() => setShowPolicy(true)} className="underline text-blue-400 hover:text-blue-300">
+                Política de Privacidade
+              </button>.
             </p>
             <div className="flex gap-2 shrink-0">
               <button
@@ -71,6 +75,11 @@ const CookieBanner = () => {
           </div>
         </motion.div>
       )}
+      <AnimatePresence>
+        {showPolicy && (
+          <PoliticaPrivacidade onClose={() => setShowPolicy(false)} />
+        )}
+      </AnimatePresence>
     </AnimatePresence>
   );
 };
