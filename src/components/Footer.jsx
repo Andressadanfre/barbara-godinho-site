@@ -136,6 +136,7 @@ const Footer = () => {
         </div>
 
         <motion.div
+          id="aviso-legal"
           className="border-t border-slate-800 pt-6 pb-4 mt-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -168,7 +169,12 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4">
             <span className="text-xs text-slate-400 hover:text-white cursor-pointer">Site desenvolvido por Andressa Dantas</span>
-            <span className="text-xs text-slate-400 hover:text-white cursor-pointer">Termos de Uso</span>
+            <button
+              onClick={() => scrollToSection('aviso-legal')}
+              className="text-xs text-slate-400 hover:text-white cursor-pointer transition-colors"
+            >
+              Aviso Legal
+            </button>
           </div>
         </motion.div>
       </div>
