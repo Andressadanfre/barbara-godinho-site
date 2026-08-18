@@ -104,7 +104,7 @@ const TrackRecord = () => {
             Histórico Profissional
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Resultados que
+            Resultados que{' '}
             <span className="block text-blue-200">falam por si</span>
           </h2>
           <p className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto">

@@ -29,7 +29,7 @@ const About = () => {
         once: true
       }}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 mb-4 md:mb-6">
-            Analista de Investimentos CNPI
+            Analista de Investimentos CNPI{' '}
             <span className="text-gradient block">Credenciada CVM • Atendimento Online</span>
           </h2>
         </motion.div>

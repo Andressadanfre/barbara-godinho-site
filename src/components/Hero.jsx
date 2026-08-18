@@ -33,7 +33,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Consultoria de Investimentos
+              Consultoria de Investimentos{' '}
               <span className="block text-blue-200">Online para Pessoa Física</span>
             </motion.h1>
 

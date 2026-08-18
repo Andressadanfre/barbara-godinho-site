@@ -42,7 +42,7 @@ const Differentials = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6">
-            Por que me
+            Por que me{' '}
             <span className="text-blue-200 block">contratar?</span>
           </h2>
           <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
