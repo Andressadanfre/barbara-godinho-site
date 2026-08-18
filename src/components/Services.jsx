@@ -55,7 +55,7 @@ const Services = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-            Análises sob medida para
+            Análises sob medida para{' '}
             <span className="text-gradient block">decisões inteligentes</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
