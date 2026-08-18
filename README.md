@@ -20,6 +20,12 @@ Site institucional para consultoria de investimentos de pessoa física, desenvol
 
 ---
 
+## Origem e evolução
+
+O projeto nasceu como um export do Hostinger Horizons (builder no-code) com o layout e conteúdo inicial da cliente. A partir daí, assumi a manutenção e evolução técnica completa: SEO técnico (schema JSON-LD, sitemap, robots.txt, correção de encoding), arquitetura de tracking (GTM + GA4 + Consent Mode v2), compliance regulatório CVM, correção de bugs estruturais de UI e documentação de decisões técnicas ao longo do processo.
+
+---
+
 ## Destaques técnicos
 
 Este projeto não é só "montar um site" — envolveu decisões de arquitetura e resolução de problemas reais:
