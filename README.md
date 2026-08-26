@@ -44,15 +44,15 @@ Este projeto não é só "montar um site" — envolveu decisões de arquitetura 
 
 ```bash
 npm install
-npm run dev       # http://localhost:3000
+npm run dev # http://localhost:3000
 ```
 
 Outros scripts:
 
 ```bash
-npm run build      # build de produção
-npm run preview    # preview do build
-npm run lint        # eslint
+npm run build # build de produção
+npm run preview # preview do build
+npm run lint # eslint
 ```
 
 ---
@@ -65,4 +65,4 @@ Hospedado na Vercel com integração direta ao GitHub — todo push para `main` 
 
 ## Autoria
 
-Desenvolvido por [Andressa Danfre](https://github.com/Andressadanfre).
+Desenvolvido por [Andressa Dantas](https://github.com/Andressadanfre).
