@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, BarChart3, Target, Award as AwardIcon } from 'lucide-react';
+import { TrendingUp, BarChart3, Target } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
