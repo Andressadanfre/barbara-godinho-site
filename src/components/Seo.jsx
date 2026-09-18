@@ -24,7 +24,7 @@ const schema = {
         name: 'CNPI ' + CNPI + ' — Certificado Nacional do Profissional de Investimento',
         recognizedBy: { '@type': 'Organization', name: 'APIMEC Brasil' },
       },
-      sameAs: ['https://substack.com/@barbaragodinhoinvest'],
+      sameAs: ['https://www.linkedin.com/in/barbaragodinhoinvestimentos/'],
     },
     {
       '@type': 'FinancialService',
@@ -35,6 +35,11 @@ const schema = {
         'Consultoria de investimentos online para pessoa física em todo o Brasil. Analista CNPI credenciada pela CVM. Montagem e acompanhamento de carteira com análise fundamentalista, valuation e estratégia personalizada.',
       areaServed: { '@type': 'Country', name: 'Brasil' },
       provider: { '@id': `${SITE_URL}/#barbara` },
+      sameAs: [
+        'https://www.instagram.com/barbaragodinhoinvest',
+        'https://substack.com/@barbaragodinhoinvest',
+        'https://share.google/d8azRzrmCPbPlfscj',
+      ],
       knowsAbout: ['Renda Fixa', 'Análise de Investimentos', 'Educação Financeira'],
     },
   ],
