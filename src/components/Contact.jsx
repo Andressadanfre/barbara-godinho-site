@@ -7,9 +7,16 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/components/ui/use-toast';
-import { supabase } from '@/lib/supabaseClient';
 
 const Contact = () => {
+  const needTypeLabels = {
+    valuation: 'Valuation de empresa',
+    portfolio: 'Planejamento de portfólio',
+    analysis: 'Análise de investimento',
+    modeling: 'Modelagem financeira',
+    consulting: 'Consultoria geral',
+    other: 'Outro',
+  };
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,47 +41,33 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      const { data, error } = await supabase
-        .from('contact_submissions')
-        .insert([
-          { 
-            name: formData.name, 
-            email: formData.email, 
-            need_type: formData.needType, 
-            message: formData.message 
-          }
-        ]);
+    const needLabel = needTypeLabels[formData.needType] || formData.needType;
+    const message =
+      `Olá Bárbara! Meu nome é ${formData.name}.\n` +
+      `Tenho interesse em: ${needLabel}\n` +
+      `${formData.message}\n\n` +
+      `(E-mail para contato: ${formData.email})`;
 
-      if (error) {
-        throw error;
-      }
-      
-      toast({
-        title: "Mensagem enviada com sucesso!",
-        description: "Entrarei em contato em breve para discutir sua necessidade.",
-      });
+    const whatsappUrl = `https://wa.me/5534998606264?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
 
-      setFormData({
-        name: '',
-        email: '',
-        needType: '',
-        message: ''
-      });
-    } catch (error) {
-      console.error('Error submitting to Supabase:', error);
-      toast({
-        title: "Erro ao enviar mensagem",
-        description: "Houve um problema ao salvar sua mensagem. Tente novamente ou entre em contato diretamente.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    toast({
+      title: "Redirecionando para o WhatsApp",
+      description: "Complete o envio por lá para falar diretamente com a Bárbara.",
+    });
+
+    setFormData({
+      name: '',
+      email: '',
+      needType: '',
+      message: ''
+    });
+
+    setIsSubmitting(false);
   };
 
   const contactInfo = [
