@@ -94,26 +94,26 @@ const Simulator = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-left">Valor Inicial (R$)</label>
-              <input type="text" inputMode="numeric" value={valorInput}
+              <label htmlFor="sim-valor" className="text-sm font-medium text-left">Valor Inicial (R$)</label>
+              <input id="sim-valor" type="text" inputMode="numeric" value={valorInput}
                 onChange={(e) => setValorInput(maskThousands(e.target.value))}
                 className="px-4 py-2 rounded-lg border bg-background" />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-left">Prazo (dias)</label>
-              <input type="number" value={dias}
+              <label htmlFor="sim-prazo" className="text-sm font-medium text-left">Prazo (dias)</label>
+              <input id="sim-prazo" type="number" value={dias}
                 onChange={(e) => setDias(e.target.value)}
                 className="px-4 py-2 rounded-lg border bg-background" />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-left">CDI/Selic (% a.a.)</label>
-              <input type="text" inputMode="decimal" value={cdi}
+              <label htmlFor="sim-cdi" className="text-sm font-medium text-left">CDI/Selic (% a.a.)</label>
+              <input id="sim-cdi" type="text" inputMode="decimal" value={cdi}
                 onChange={(e) => setCdi(e.target.value)}
                 className="px-4 py-2 rounded-lg border bg-background" />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-left">LCI/LCA (% do CDI)</label>
-              <input type="text" inputMode="decimal" value={lciPct}
+              <label htmlFor="sim-lci" className="text-sm font-medium text-left">LCI/LCA (% do CDI)</label>
+              <input id="sim-lci" type="text" inputMode="decimal" value={lciPct}
                 onChange={(e) => setLciPct(e.target.value)}
                 className="px-4 py-2 rounded-lg border bg-background" />
             </div>
