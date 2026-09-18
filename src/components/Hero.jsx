@@ -92,7 +92,10 @@ const Hero = () => {
               <img
                 className="w-full h-auto rounded-2xl shadow-2xl max-w-md mx-auto lg:max-w-full"
                 alt="Análise financeira profissional com gráficos e dados"
-                src="https://images.unsplash.com/photo-1620266757065-5814239881fd" />
+                src="https://images.unsplash.com/photo-1620266757065-5814239881fd?w=1200&q=80&auto=format"
+                width="1200"
+                height="798"
+                fetchpriority="high" />
 
               <motion.div
                 className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4 transform -rotate-3 glass-effect rounded-lg sm:rounded-xl p-2 sm:p-3 text-white shadow-md"
