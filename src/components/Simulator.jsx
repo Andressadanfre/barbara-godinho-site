@@ -28,17 +28,18 @@ function simular({ capitalCents, dias, cdiAA, lciPctCdi }) {
   const cdi = cdiAA / 100;
   const fatorTempo = dias / 365;
 
-  const taxaEfCDB = cdi * fatorTempo;
+  const taxaEfCDB = Math.pow(1 + cdi, fatorTempo) - 1;
   const lucroBrutoCDB = capitalCents * taxaEfCDB;
   const irRate = getIRRate(dias);
   const irPagoCDB = lucroBrutoCDB * irRate;
   const lucroLiqCDB = lucroBrutoCDB - irPagoCDB;
 
-  const taxaEfLci = cdi * (lciPctCdi / 100) * fatorTempo;
+  const cdiLci = cdi * (lciPctCdi / 100);
+  const taxaEfLci = Math.pow(1 + cdiLci, fatorTempo) - 1;
   const lucroLiqLci = capitalCents * taxaEfLci;
 
   const poupAA = cdiAA > 8.5 ? Math.pow(1.005, 12) - 1 : cdi * 0.7;
-  const taxaEfPoup = poupAA * fatorTempo;
+  const taxaEfPoup = Math.pow(1 + poupAA, fatorTempo) - 1;
   const lucroLiqPoup = capitalCents * taxaEfPoup;
 
   const linhas = [
