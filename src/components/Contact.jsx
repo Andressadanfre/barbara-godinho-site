@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,6 +7,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/components/ui/use-toast';
+import PoliticaPrivacidade from '@/components/PoliticaPrivacidade';
+import { sendLead, getAttribution, formatWhatsapp } from '@/lib/leads';
 
 const Contact = () => {
   const needTypeLabels = {
@@ -20,17 +22,20 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    whatsapp: '',
     needType: '',
-    message: ''
+    message: '',
+    website: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPolicy, setShowPolicy] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: name === 'whatsapp' ? formatWhatsapp(value) : value
     }));
   };
 
@@ -43,7 +48,19 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formData.website) return;
     setIsSubmitting(true);
+
+    const serviceType = formData.needType || 'nao_informado';
+    sendLead({
+      nome: formData.name,
+      email: formData.email,
+      whatsapp: formData.whatsapp,
+      tipo_necessidade: serviceType,
+      mensagem: formData.message,
+      website: formData.website,
+      ...getAttribution(),
+    });
 
     const needLabel = needTypeLabels[formData.needType] || formData.needType;
     const message =
@@ -59,7 +76,7 @@ const Contact = () => {
       event: 'generate_lead',
       lead_channel: 'whatsapp',
       lead_source: 'contact_form',
-      service_type: formData.needType || 'nao_informado',
+      service_type: serviceType,
     });
 
     window.open(whatsappUrl, '_blank');
@@ -72,8 +89,10 @@ const Contact = () => {
     setFormData({
       name: '',
       email: '',
+      whatsapp: '',
       needType: '',
-      message: ''
+      message: '',
+      website: ''
     });
 
     setIsSubmitting(false);
@@ -128,6 +147,18 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
+              <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+                <label htmlFor="website">Website</label>
+                <input
+                  id="website"
+                  name="website"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={formData.website}
+                  onChange={handleInputChange}
+                />
+              </div>
               <div>
                 <Label htmlFor="name" className="text-slate-700 font-medium">
                   Nome completo
@@ -157,6 +188,26 @@ const Contact = () => {
                   required
                   className="mt-2"
                   placeholder="seu@email.com"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="whatsapp" className="text-slate-700 font-medium">
+                  WhatsApp
+                </Label>
+                <Input
+                  id="whatsapp"
+                  name="whatsapp"
+                  type="tel"
+                  inputMode="numeric"
+                  autoComplete="tel-national"
+                  value={formData.whatsapp}
+                  onChange={handleInputChange}
+                  required
+                  pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                  title="Informe DDD + número, ex.: (34) 99999-9999"
+                  className="mt-2"
+                  placeholder="(34) 99999-9999"
                 />
               </div>
 
@@ -208,6 +259,17 @@ const Contact = () => {
                   </>
                 )}
               </Button>
+
+              <p className="text-xs text-slate-500 text-center">
+                Ao enviar, você concorda com o armazenamento dos seus dados para retorno do contato, conforme a{' '}
+                <button
+                  type="button"
+                  onClick={() => setShowPolicy(true)}
+                  className="underline hover:text-slate-700"
+                >
+                  Política de Privacidade
+                </button>.
+              </p>
             </form>
           </motion.div>
 
@@ -268,6 +330,9 @@ const Contact = () => {
           </motion.div>
         </div>
       </div>
+      <AnimatePresence>
+        {showPolicy && <PoliticaPrivacidade onClose={() => setShowPolicy(false)} />}
+      </AnimatePresence>
     </section>
   );
 };
