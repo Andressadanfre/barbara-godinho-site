@@ -33,7 +33,7 @@ const PoliticaPrivacidade = ({ onClose }) => {
         </div>
 
         <div className="px-6 py-6 space-y-6 text-sm text-slate-700 leading-relaxed">
-          <p className="text-xs text-slate-400">Última atualização: junho de 2026</p>
+          <p className="text-xs text-slate-400">Última atualização: setembro de 2026</p>
 
           <section>
             <h3 className="font-semibold text-slate-800 mb-2">1. Quem somos</h3>
@@ -47,7 +47,8 @@ const PoliticaPrivacidade = ({ onClose }) => {
           <section>
             <h3 className="font-semibold text-slate-800 mb-2">2. Dados que coletamos</h3>
             <ul className="list-disc pl-4 space-y-1">
-              <li><strong>Dados de contato:</strong> nome, e-mail e WhatsApp fornecidos voluntariamente no formulário de contato.</li>
+              <li><strong>Dados de contato:</strong> nome, e-mail, WhatsApp, tipo de necessidade e mensagem fornecidos voluntariamente no formulário de contato.</li>
+              <li><strong>Dados de origem do contato:</strong> página do envio e parâmetros de campanha presentes no endereço do site (origem do acesso e identificador de clique em anúncio do Google), registrados junto ao formulário.</li>
               <li><strong>Dados de navegação:</strong> páginas visitadas, tempo de sessão e origem do acesso, coletados via Google Analytics 4 (somente com seu consentimento).</li>
             </ul>
           </section>
@@ -55,7 +56,8 @@ const PoliticaPrivacidade = ({ onClose }) => {
           <section>
             <h3 className="font-semibold text-slate-800 mb-2">3. Finalidade do tratamento</h3>
             <ul className="list-disc pl-4 space-y-1">
-              <li>Responder solicitações de contato e proposta de serviços.</li>
+              <li>Responder solicitações de contato e proposta de serviços, inclusive retornando o contato por WhatsApp ou e-mail caso a conversa não seja concluída.</li>
+              <li>Medir a origem dos contatos e o desempenho de campanhas de divulgação.</li>
               <li>Analisar o desempenho do site para melhorar a experiência do usuário.</li>
             </ul>
           </section>
@@ -79,8 +81,10 @@ const PoliticaPrivacidade = ({ onClose }) => {
           <section>
             <h3 className="font-semibold text-slate-800 mb-2">6. Compartilhamento de dados</h3>
             <p>
-              Não vendemos nem compartilhamos seus dados pessoais com terceiros, exceto com o Google LLC
-              (Google Analytics), sujeito à política de privacidade do Google, e quando exigido por lei.
+              Não vendemos seus dados pessoais. Eles são tratados apenas pelos seguintes fornecedores, na medida necessária
+              às finalidades acima: Google LLC (armazenamento dos dados do formulário no Google Workspace e análise via
+              Google Analytics) e WhatsApp/Meta, quando você opta por iniciar a conversa pelo aplicativo. Também poderão ser
+              compartilhados quando exigido por lei. Esses fornecedores seguem suas próprias políticas de privacidade.
             </p>
           </section>
 
@@ -104,7 +108,8 @@ const PoliticaPrivacidade = ({ onClose }) => {
           <section>
             <h3 className="font-semibold text-slate-800 mb-2">8. Retenção de dados</h3>
             <p>
-              Dados de contato são mantidos pelo tempo necessário para atendimento da solicitação.
+              Dados de contato e de origem do contato são mantidos por até 12 meses após o último contato e depois
+              excluídos, salvo se houver relação contratual ou obrigação legal que exija prazo maior.
               Dados de navegação seguem a política de retenção do Google Analytics (padrão: 14 meses).
             </p>
           </section>
