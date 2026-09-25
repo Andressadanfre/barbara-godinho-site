@@ -53,6 +53,15 @@ const Contact = () => {
       `(E-mail para contato: ${formData.email})`;
 
     const whatsappUrl = `https://wa.me/5534998606264?text=${encodeURIComponent(message)}`;
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'generate_lead',
+      lead_channel: 'whatsapp',
+      lead_source: 'contact_form',
+      service_type: formData.needType || 'nao_informado',
+    });
+
     window.open(whatsappUrl, '_blank');
 
     toast({
