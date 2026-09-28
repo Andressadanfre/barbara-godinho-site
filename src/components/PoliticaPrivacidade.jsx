@@ -73,8 +73,11 @@ const PoliticaPrivacidade = ({ onClose }) => {
           <section>
             <h3 className="font-semibold text-slate-800 mb-2">5. Cookies e rastreamento</h3>
             <p>
-              Utilizamos cookies de análise via Google Analytics 4, ativados somente após seu consentimento explícito.
-              Você pode alterar sua preferência a qualquer momento limpando os dados do navegador.
+              Utilizamos cookies do Google Analytics 4 (análise de tráfego) e do Google Ads (medição do resultado de
+              anúncios e exibição de anúncios relacionados), gravados somente após você clicar em "Aceitar" no aviso de
+              cookies. Sem esse consentimento, as ferramentas do Google podem enviar sinais técnicos sem cookies e sem
+              identificação pessoal, usados apenas para estimativas estatísticas agregadas. Você pode alterar sua
+              preferência a qualquer momento limpando os dados do navegador; o aviso será exibido novamente.
             </p>
           </section>
 
@@ -82,9 +85,10 @@ const PoliticaPrivacidade = ({ onClose }) => {
             <h3 className="font-semibold text-slate-800 mb-2">6. Compartilhamento de dados</h3>
             <p>
               Não vendemos seus dados pessoais. Eles são tratados apenas pelos seguintes fornecedores, na medida necessária
-              às finalidades acima: Google LLC (armazenamento dos dados do formulário no Google Workspace e análise via
-              Google Analytics) e WhatsApp/Meta, quando você opta por iniciar a conversa pelo aplicativo. Também poderão ser
-              compartilhados quando exigido por lei. Esses fornecedores seguem suas próprias políticas de privacidade.
+              às finalidades acima: Google LLC (armazenamento dos dados do formulário no Google Workspace, análise via
+              Google Analytics e medição de anúncios via Google Ads) e WhatsApp/Meta, quando você opta por iniciar a
+              conversa pelo aplicativo. Também poderão ser compartilhados quando exigido por lei. Esses fornecedores
+              seguem suas próprias políticas de privacidade.
             </p>
           </section>
 
