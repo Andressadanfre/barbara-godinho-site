@@ -4,12 +4,15 @@ import PoliticaPrivacidade from '@/components/PoliticaPrivacidade';
 
 const CONSENT_KEY = 'bg_cookie_consent';
 
-const pushConsentToGTM = (granted) => {
+const updateConsent = (granted) => {
+  const value = granted ? 'granted' : 'denied';
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: 'cookie_consent_update',
-    analytics_storage: granted ? 'granted' : 'denied',
-    ad_storage: 'denied',
+  window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+  window.gtag('consent', 'update', {
+    ad_storage: value,
+    ad_user_data: value,
+    ad_personalization: value,
+    analytics_storage: value,
   });
 };
 
@@ -18,25 +21,18 @@ const CookieBanner = () => {
   const [showPolicy, setShowPolicy] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem(CONSENT_KEY);
-    if (saved === 'accepted') {
-      pushConsentToGTM(true);
-    } else if (saved === 'declined') {
-      pushConsentToGTM(false);
-    } else {
-      setVisible(true);
-    }
+    if (!localStorage.getItem(CONSENT_KEY)) setVisible(true);
   }, []);
 
   const accept = () => {
     localStorage.setItem(CONSENT_KEY, 'accepted');
-    pushConsentToGTM(true);
+    updateConsent(true);
     setVisible(false);
   };
 
   const decline = () => {
     localStorage.setItem(CONSENT_KEY, 'declined');
-    pushConsentToGTM(false);
+    updateConsent(false);
     setVisible(false);
   };
 
@@ -52,7 +48,7 @@ const CookieBanner = () => {
         >
           <div className="container mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
-              Usamos cookies para analisar o tráfego do site via Google Analytics e melhorar sua experiência.
+              Usamos cookies do Google Analytics e do Google Ads para medir o tráfego do site e o resultado dos nossos anúncios.
               Sua escolha é salva e respeitada em visitas futuras, conforme a{' '}
               <button onClick={() => setShowPolicy(true)} className="underline text-blue-400 hover:text-blue-300">
                 Política de Privacidade
