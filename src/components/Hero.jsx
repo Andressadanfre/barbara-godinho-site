@@ -43,7 +43,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Bárbara Godinho • Analista CNPI Credenciada CVM • Atendimento Online
+              Bárbara Godinho • Consultora CVM e Analista CNPI • Atendimento Online
             </motion.div>
 
             <motion.p
@@ -61,10 +61,10 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              Analista CNPI credenciada pela CVM, especializada em consultoria de investimentos
-              para pessoa física. Ajudo você a montar e acompanhar sua carteira com base em
-              análise fundamentalista, valuation e estratégia personalizada — tudo online,
-              em qualquer lugar do Brasil.
+              Consultora de valores mobiliários registrada na CVM e analista CNPI,
+              especializada em consultoria de investimentos para pessoa física. Ajudo você
+              a montar e acompanhar sua carteira com base em análise fundamentalista,
+              valuation e estratégia personalizada — tudo online, em qualquer lugar do Brasil.
             </motion.p>
 
             <motion.div

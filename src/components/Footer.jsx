@@ -45,9 +45,9 @@ const Footer = () => {
         }}>
             <Logo className="text-white" />
             <p className="text-sm text-slate-300 leading-relaxed">
-              Especialista em análises financeiras estratégicas, 
-              valuation e planejamento de investimentos com 
-              certificação CNPI, credenciamento CVM e MBA pela USP/ESALQ.
+              Consultora de valores mobiliários registrada na CVM e analista
+              certificada CNPI, especialista em valuation e planejamento de
+              investimentos, com MBA pela USP/ESALQ.
             </p>
             <div className="flex space-x-3 pt-2">
               <a href="https://www.linkedin.com/in/barbaragodinhoinvestimentos/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Bárbara Godinho" className="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
@@ -117,8 +117,8 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-blue-400 shrink-0" />
-                <a href="mailto:barbara.godinhop@gmail.com" className="text-sm text-slate-300 hover:text-white transition-colors break-all">
-                  barbara.godinhop@gmail.com
+                <a href="mailto:contato@barbaragodinhoinvest.com.br" className="text-sm text-slate-300 hover:text-white transition-colors break-words">
+                  contato@barbaragodinhoinvest.com.br
                 </a>
               </div>
               <div className="flex items-center space-x-2">
@@ -144,13 +144,14 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <p className="text-xs text-slate-500 leading-relaxed text-center sm:text-left">
-            <strong className="text-slate-400">Aviso Legal:</strong> Bárbara Godinho é analista de valores mobiliários certificada CNPI
-            (EM-9901/APIMEC), credenciada pela CVM. As informações, análises e conteúdos disponibilizados
-            neste site têm caráter exclusivamente informativo e educacional, não constituindo oferta,
-            recomendação ou aconselhamento de investimento, compra ou venda de qualquer ativo financeiro.
-            Rentabilidades passadas não garantem resultados futuros. Antes de investir, avalie seus
-            objetivos, situação financeira e perfil de risco. Em caso de dúvidas, consulte um profissional
-            habilitado. Conforme CVM Resolução 19/2021.
+            <strong className="text-slate-400">Aviso Legal:</strong> Bárbara Godinho Pereira é Consultora de
+            Valores Mobiliários registrada na CVM (Resolução CVM nº 19/2021) e Analista de Valores
+            Mobiliários certificada CNPI EM-9901, credenciada pela APIMEC (Resolução CVM nº 20/2021).
+            Os conteúdos deste site têm caráter informativo e educacional e não constituem oferta,
+            recomendação individual ou promessa de rentabilidade. A consultoria é prestada de forma
+            individualizada, mediante contratação e avaliação do perfil do cliente. Investimentos
+            envolvem riscos, inclusive de perda do capital investido, e rentabilidade passada não
+            garante resultados futuros. Contato: contato@barbaragodinhoinvest.com.br.
           </p>
         </motion.div>
 

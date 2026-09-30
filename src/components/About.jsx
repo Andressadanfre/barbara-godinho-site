@@ -9,7 +9,7 @@ const About = () => {
   }, {
     icon: ShieldCheck,
     title: "Consultora CVM",
-    description: "Credenciada ao órgão regulador brasileiro"
+    description: "Registrada na Comissão de Valores Mobiliários"
   }, {
     icon: GraduationCap,
     title: "MBA USP/ESALQ",
@@ -30,7 +30,7 @@ const About = () => {
       }}>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 mb-4 md:mb-6">
             Analista de Investimentos CNPI{' '}
-            <span className="text-gradient block">Credenciada CVM • Atendimento Online</span>
+            <span className="text-gradient block">Consultora CVM • Atendimento Online</span>
           </h2>
         </motion.div>
 
@@ -49,14 +49,14 @@ const About = () => {
         }}>
             <div className="space-y-6 text-base sm:text-lg text-slate-700 leading-relaxed">
               <p>
-                Sou <strong>Analista de Investimentos CNPI</strong> e <strong>Consultora credenciada pela CVM</strong>, com MBA pela USP/ESALQ. 
+                Sou <strong>Analista de Investimentos CNPI</strong> e <strong>Consultora de Valores Mobiliários registrada na CVM</strong>, com MBA pela USP/ESALQ. 
                 Ofereço consultoria de investimentos online para pessoa física em todo o Brasil — desde a montagem da carteira até o acompanhamento contínuo, com base em análise fundamentalista e valuation.
               </p>
               
               <p>
                 Minha missão é traduzir dados complexos em decisões claras e acionáveis. 
                 Cada cliente recebe uma estratégia personalizada, construída com rigor técnico 
-                e linguagem acessível — para você investir com mais segurança e menos ruído.
+                e linguagem acessível — para você investir com mais clareza e menos ruído.
               </p>
             </div>
           </motion.div>

@@ -102,8 +102,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "barbara.godinhop@gmail.com",
-      link: "mailto:barbara.godinhop@gmail.com"
+      value: "contato@barbaragodinhoinvest.com.br",
+      link: "mailto:contato@barbaragodinhoinvest.com.br"
     },
     {
       icon: Phone,
