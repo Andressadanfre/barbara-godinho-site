@@ -52,7 +52,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Especialista em Valuation, Modelagem e Estratégia de Investimentos para Decisões Inteligentes
+              Ajudo investidores a construir patrimônio com método.
             </motion.p>
 
             <motion.p
@@ -61,10 +61,10 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              Consultora de valores mobiliários registrada na CVM e analista CNPI,
-              especializada em consultoria de investimentos para pessoa física. Ajudo você
-              a montar e acompanhar sua carteira com base em análise fundamentalista,
-              valuation e estratégia personalizada — tudo online, em qualquer lugar do Brasil.
+              Além de consultora, sou empresária: tenho duas lojas físicas em Uberlândia e um
+              e-commerce. Sei o que é tomar decisão com o próprio dinheiro em jogo. Monto e
+              acompanho sua carteira com você, com análise fundamentalista, de forma
+              personalizada e online.
             </motion.p>
 
             <motion.div
