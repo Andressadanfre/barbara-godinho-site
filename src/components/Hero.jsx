@@ -62,9 +62,9 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               Além de consultora, sou empresária: tenho duas lojas físicas em Uberlândia e um
-              e-commerce. Sei o que é tomar decisão com o próprio dinheiro em jogo. Monto e
-              acompanho sua carteira com você, com análise fundamentalista, de forma
-              personalizada e online.
+              e-commerce. Sei o que é tomar decisão com o próprio dinheiro em jogo. Sou
+              independente: não recebo comissão de nenhum produto. Monto e acompanho sua
+              carteira pelo seu objetivo e perfil, com análise fundamentalista.
             </motion.p>
 
             <motion.div
@@ -77,8 +77,11 @@ const Hero = () => {
                 onClick={scrollToContact}
                 className="bg-white text-blue-900 hover:bg-blue-50 text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
-                Solicitar uma análise
+                Agendar primeira conversa
               </Button>
+              <p className="mt-3 text-sm text-blue-100/80">
+                Sem custo · Para patrimônio a partir de R$ 300 mil
+              </p>
             </motion.div>
           </motion.div>
 

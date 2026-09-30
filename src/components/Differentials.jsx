@@ -6,8 +6,8 @@ const Differentials = () => {
   const differentials = [
     {
       icon: Shield,
-      title: "Certificação CNPI reconhecida pelo mercado",
-      description: "Credencial oficial que garante conhecimento técnico e ético nas análises de investimentos."
+      title: "Registro na CVM e certificação CNPI",
+      description: "Consultora de valores mobiliários registrada na CVM e analista CNPI credenciada pela APIMEC."
     },
     {
       icon: Brain,
@@ -17,12 +17,12 @@ const Differentials = () => {
     {
       icon: Target,
       title: "Análises personalizadas e orientadas a objetivos",
-      description: "Cada relatório é desenvolvido considerando suas metas específicas e perfil de risco."
+      description: "Cada carteira é montada pelos seus objetivos e perfil de risco."
     },
     {
       icon: BarChartHorizontalBig,
-      title: "Metodologia baseada em análise quantitativa avançada",
-      description: "Utilizo modelos financeiros robustos para decisões baseadas em dados sólidos."
+      title: "Método baseado em análise fundamentalista",
+      description: "Avalio cada ativo pelos fundamentos e pelo papel que ele cumpre na sua carteira."
     },
     {
       icon: Handshake,
@@ -46,7 +46,7 @@ const Differentials = () => {
             <span className="text-blue-200 block">contratar?</span>
           </h2>
           <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
-            Combinação única de expertise técnica, certificação profissional e independência.
+            Técnica, registro na CVM e independência de produtos.
           </p>
         </motion.div>
 

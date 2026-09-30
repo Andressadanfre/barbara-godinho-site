@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Layers, PieChart, Activity, RefreshCw, LifeBuoy } from 'lucide-react';
+import { Layers, PieChart, Activity, RefreshCw, HeartHandshake } from 'lucide-react';
 
 const activities = [
   { icon: Layers, label: 'Estruturação de portfólio' },
   { icon: PieChart, label: 'Análise de carteiras' },
   { icon: Activity, label: 'Acompanhamento de alocações' },
   { icon: RefreshCw, label: 'Reuniões de rebalanceamento' },
-  { icon: LifeBuoy, label: 'Apoio na execução das alocações' },
+  { icon: HeartHandshake, label: 'Apoio na execução das alocações' },
 ];
 
 const TrackRecord = () => (

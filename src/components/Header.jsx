@@ -72,7 +72,7 @@ const Header = () => {
               onClick={() => scrollToSection('contact')}
               className={`text-sm px-4 py-2 ${isScrolled ? 'gradient-bg text-white hover:opacity-90' : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm' } transition-all`}
             >
-              Solicitar Análise
+              Agendar Conversa
             </Button>
           </div>
 
@@ -116,7 +116,7 @@ const Header = () => {
               onClick={() => scrollToSection('contact')}
               className={`w-full mt-3 py-2.5 text-base ${isScrolled ? 'gradient-bg text-white hover:opacity-90' : 'bg-white/20 text-white hover:bg-white/30'}`}
             >
-              Solicitar Análise
+              Agendar Conversa
             </Button>
           </div>
         </motion.nav>
