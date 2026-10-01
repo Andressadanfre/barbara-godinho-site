@@ -169,7 +169,14 @@ const Footer = () => {
             © {currentYear} Bárbara Godinho. Todos os direitos reservados.
           </p>
           <div className="flex space-x-4">
-            <span className="text-xs text-slate-400 hover:text-white cursor-pointer">Site desenvolvido por Andressa Dantas</span>
+            <a
+              href="https://wa.me/5534992339555?text=Ol%C3%A1%20Andressa!%20Vi%20o%20site%20da%20B%C3%A1rbara%20Godinho."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-slate-400 hover:text-white transition-colors"
+            >
+              Site desenvolvido por Andressa Dantas
+            </a>
             <button
               onClick={() => scrollToSection('aviso-legal')}
               className="text-xs text-slate-400 hover:text-white cursor-pointer transition-colors"
