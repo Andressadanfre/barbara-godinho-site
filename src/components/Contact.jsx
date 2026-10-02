@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -19,16 +19,25 @@ const Contact = () => {
     consulting: 'Consultoria geral',
     other: 'Outro',
   };
+  const wealthRangeLabels = {
+    abaixo_300k: 'Abaixo de R$ 300 mil',
+    '300k_1m': 'De R$ 300 mil a R$ 1 milhão',
+    '1m_3m': 'De R$ 1 milhão a R$ 3 milhões',
+    acima_3m: 'Acima de R$ 3 milhões',
+  };
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     whatsapp: '',
+    wealthRange: '',
     needType: '',
     message: '',
     website: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPolicy, setShowPolicy] = useState(false);
+  const [belowMinimumName, setBelowMinimumName] = useState('');
+  const formCardRef = useRef(null);
   const { toast } = useToast();
 
   const handleInputChange = (e) => {
@@ -39,57 +48,73 @@ const Contact = () => {
     }));
   };
 
-  const handleSelectChange = (value) => {
+  const handleSelectChange = (field) => (value) => {
     setFormData(prev => ({
       ...prev,
-      needType: value
+      [field]: value
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.website) return;
+    if (!formData.wealthRange) {
+      toast({
+        title: "Informe o patrimônio disponível",
+        description: "Selecione uma faixa para continuar.",
+      });
+      return;
+    }
     setIsSubmitting(true);
 
     const serviceType = formData.needType || 'nao_informado';
+    const isQualified = formData.wealthRange !== 'abaixo_300k';
+
     sendLead({
       nome: formData.name,
       email: formData.email,
       whatsapp: formData.whatsapp,
       tipo_necessidade: serviceType,
       mensagem: formData.message,
+      faixa_patrimonio: formData.wealthRange,
       website: formData.website,
       ...getAttribution(),
     });
 
-    const needLabel = needTypeLabels[formData.needType] || formData.needType;
-    const message =
-      `Olá Bárbara! Meu nome é ${formData.name}.\n` +
-      `Tenho interesse em: ${needLabel}\n` +
-      `${formData.message}\n\n` +
-      `(E-mail para contato: ${formData.email})`;
-
-    const whatsappUrl = `https://wa.me/5534998606264?text=${encodeURIComponent(message)}`;
-
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: 'generate_lead',
-      lead_channel: 'whatsapp',
+      event: isQualified ? 'generate_lead' : 'lead_below_minimum',
+      lead_channel: isQualified ? 'whatsapp' : 'form_only',
       lead_source: 'contact_form',
       service_type: serviceType,
+      wealth_range: formData.wealthRange,
     });
 
-    window.open(whatsappUrl, '_blank');
+    if (isQualified) {
+      const needLabel = needTypeLabels[formData.needType] || formData.needType;
+      const message =
+        `Olá Bárbara! Meu nome é ${formData.name}.\n` +
+        `Patrimônio disponível: ${wealthRangeLabels[formData.wealthRange]}\n` +
+        `Tenho interesse em: ${needLabel}\n` +
+        `${formData.message}\n\n` +
+        `(E-mail para contato: ${formData.email})`;
 
-    toast({
-      title: "Redirecionando para o WhatsApp",
-      description: "Complete o envio por lá para falar diretamente com a Bárbara.",
-    });
+      window.open(`https://wa.me/5534998606264?text=${encodeURIComponent(message)}`, '_blank');
+
+      toast({
+        title: "Redirecionando para o WhatsApp",
+        description: "Complete o envio por lá para falar diretamente com a Bárbara.",
+      });
+    } else {
+      setBelowMinimumName(formData.name.trim().split(' ')[0]);
+      formCardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
     setFormData({
       name: '',
       email: '',
       whatsapp: '',
+      wealthRange: '',
       needType: '',
       message: '',
       website: ''
@@ -140,12 +165,27 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-16">
           <motion.div
+            ref={formCardRef}
             className="bg-white rounded-2xl p-8 shadow-xl"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+            {belowMinimumName ? (
+              <div className="h-full flex flex-col items-center justify-center text-center py-8 space-y-4" role="status">
+                <h3 className="text-2xl font-bold text-slate-800">
+                  Obrigada pelo interesse, {belowMinimumName}.
+                </h3>
+                <p className="text-slate-600">
+                  Meu atendimento é dedicado a patrimônios a partir de R$&nbsp;300 mil.
+                  Esse recorte me permite acompanhar cada cliente de perto.
+                </p>
+                <Button type="button" variant="outline" onClick={() => setBelowMinimumName('')}>
+                  Voltar
+                </Button>
+              </div>
+            ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
                 <label htmlFor="website">Website</label>
@@ -159,6 +199,9 @@ const Contact = () => {
                   onChange={handleInputChange}
                 />
               </div>
+              <p className="text-sm text-slate-600 bg-slate-50 rounded-lg px-4 py-3">
+                Atendimento exclusivo para pessoas físicas, com patrimônio a partir de R$&nbsp;300 mil.
+              </p>
               <div>
                 <Label htmlFor="name" className="text-slate-700 font-medium">
                   Nome completo
@@ -212,10 +255,26 @@ const Contact = () => {
               </div>
 
               <div>
+                <Label htmlFor="wealthRange" className="text-slate-700 font-medium">
+                  Patrimônio disponível para investir
+                </Label>
+                <Select value={formData.wealthRange} onValueChange={handleSelectChange('wealthRange')}>
+                  <SelectTrigger id="wealthRange" className="mt-2">
+                    <SelectValue placeholder="Selecione uma faixa" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {Object.entries(wealthRangeLabels).map(([value, label]) => (
+                      <SelectItem key={value} value={value}>{label}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div>
                 <Label htmlFor="needType" className="text-slate-700 font-medium">
                   Tipo de necessidade
                 </Label>
-                <Select value={formData.needType} onValueChange={handleSelectChange}>
+                <Select value={formData.needType} onValueChange={handleSelectChange('needType')}>
                   <SelectTrigger className="mt-2">
                     <SelectValue placeholder="Selecione o tipo de serviço" />
                   </SelectTrigger>
@@ -271,6 +330,7 @@ const Contact = () => {
                 </button>.
               </p>
             </form>
+            )}
           </motion.div>
 
           <motion.div
