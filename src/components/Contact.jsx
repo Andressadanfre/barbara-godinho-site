@@ -12,11 +12,10 @@ import { sendLead, getAttribution, formatWhatsapp } from '@/lib/leads';
 
 const Contact = () => {
   const needTypeLabels = {
-    valuation: 'Valuation de empresa',
-    portfolio: 'Planejamento de portfólio',
-    analysis: 'Análise de investimento',
-    modeling: 'Modelagem financeira',
-    consulting: 'Consultoria geral',
+    portfolio: 'Montar ou reorganizar minha carteira',
+    second_opinion: 'Segunda opinião sobre meus investimentos',
+    retirement: 'Planejar a aposentadoria / renda futura',
+    liquidity_event: 'Investir um valor recebido (venda, herança, bônus)',
     other: 'Outro',
   };
   const wealthRangeLabels = {
@@ -279,12 +278,9 @@ const Contact = () => {
                     <SelectValue placeholder="Selecione o tipo de serviço" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="valuation">Valuation de empresa</SelectItem>
-                    <SelectItem value="portfolio">Planejamento de portfólio</SelectItem>
-                    <SelectItem value="analysis">Análise de investimento</SelectItem>
-                    <SelectItem value="modeling">Modelagem financeira</SelectItem>
-                    <SelectItem value="consulting">Consultoria geral</SelectItem>
-                    <SelectItem value="other">Outro</SelectItem>
+                    {Object.entries(needTypeLabels).map(([value, label]) => (
+                      <SelectItem key={value} value={value}>{label}</SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>

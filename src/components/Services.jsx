@@ -1,38 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, TrendingUp, PieChart, FileText, Globe } from 'lucide-react';
+import { PieChart, FileText, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Services = () => {
   const services = [
     {
-      icon: Calculator,
-      title: "Valuation de Empresas",
-      description: "DCF, múltiplos e análise comparativa para determinar o valor justo de empresas",
-      features: ["Fluxo de Caixa Descontado", "Análise por Múltiplos", "Comparação Setorial"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Projeções Financeiras",
-      description: "Estudos de viabilidade e modelagem financeira para tomada de decisão",
-      features: ["Cenários Otimista/Pessimista", "Análise de Sensibilidade", "ROI e Payback"]
-    },
-    {
       icon: PieChart,
       title: "Planejamento de Portfólio",
       description: "Estratégias personalizadas de alocação e rebalanceamento de investimentos",
-      features: ["Diversificação Estratégica", "Gestão de Risco", "Rebalanceamento Periódico"]
+      features: ["Diversificação Estratégica", "Controle de Risco", "Rebalanceamento Periódico"]
     },
     {
       icon: FileText,
       title: "Relatórios Personalizados",
-      description: "Análises detalhadas e relatórios sob medida para investidores e gestores",
+      description: "Análises detalhadas e relatórios sob medida para a sua carteira",
       features: ["Análise Fundamentalista", "Recomendações Claras", "Acompanhamento Periódico"]
     },
     {
       icon: Globe,
       title: "Análises Macroeconômicas",
-      description: "Estudos setoriais e análise do cenário macroeconômico brasileiro e global",
+      description: "Leitura do cenário econômico brasileiro e global aplicada às decisões da sua carteira",
       features: ["Cenário Macro", "Análise Setorial", "Tendências de Mercado"]
     }
   ];
@@ -59,7 +47,7 @@ const Services = () => {
             <span className="text-gradient block">decisões inteligentes</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Serviços especializados em análise financeira, valuation e estratégia de investimentos
+            Consultoria de investimentos para pessoa física, com análise fundamentalista e estratégia personalizada
           </p>
         </motion.div>
 

@@ -33,13 +33,13 @@ const PoliticaPrivacidade = ({ onClose }) => {
         </div>
 
         <div className="px-6 py-6 space-y-6 text-sm text-slate-700 leading-relaxed">
-          <p className="text-xs text-slate-400">Última atualização: setembro de 2026</p>
+          <p className="text-xs text-slate-400">Última atualização: outubro de 2026</p>
 
           <section>
             <h3 className="font-semibold text-slate-800 mb-2">1. Quem somos</h3>
             <p>
-              Bárbara Godinho Investimentos, CNPJ 27.673.614/0001-90, analista de valores mobiliários
-              credenciada pela CVM (CNPI EM-9901/APIMEC), responsável pelo site{' '}
+              Barbara Godinho Pereira, pessoa física, consultora de valores mobiliários registrada na
+              CVM e analista de valores mobiliários certificada (CNPI EM-9901/APIMEC), responsável pelo site{' '}
               <strong>www.barbaragodinhoinvest.com.br</strong>.
             </p>
           </section>
@@ -47,7 +47,7 @@ const PoliticaPrivacidade = ({ onClose }) => {
           <section>
             <h3 className="font-semibold text-slate-800 mb-2">2. Dados que coletamos</h3>
             <ul className="list-disc pl-4 space-y-1">
-              <li><strong>Dados de contato:</strong> nome, e-mail, WhatsApp, tipo de necessidade e mensagem fornecidos voluntariamente no formulário de contato.</li>
+              <li><strong>Dados de contato:</strong> nome, e-mail, WhatsApp, faixa de patrimônio disponível para investir, tipo de necessidade e mensagem fornecidos voluntariamente no formulário de contato.</li>
               <li><strong>Dados de origem do contato:</strong> página do envio e parâmetros de campanha presentes no endereço do site (origem do acesso e identificador de clique em anúncio do Google), registrados junto ao formulário.</li>
               <li><strong>Dados de navegação:</strong> páginas visitadas, tempo de sessão e origem do acesso, coletados via Google Analytics 4 (somente com seu consentimento).</li>
             </ul>
@@ -57,6 +57,7 @@ const PoliticaPrivacidade = ({ onClose }) => {
             <h3 className="font-semibold text-slate-800 mb-2">3. Finalidade do tratamento</h3>
             <ul className="list-disc pl-4 space-y-1">
               <li>Responder solicitações de contato e proposta de serviços, inclusive retornando o contato por WhatsApp ou e-mail caso a conversa não seja concluída.</li>
+              <li>Verificar se o atendimento é compatível com o perfil atendido (patrimônio a partir de R$ 300 mil).</li>
               <li>Medir a origem dos contatos e o desempenho de campanhas de divulgação.</li>
               <li>Analisar o desempenho do site para melhorar a experiência do usuário.</li>
             </ul>
@@ -103,8 +104,8 @@ const PoliticaPrivacidade = ({ onClose }) => {
             </ul>
             <p className="mt-2">
               Para exercer esses direitos, entre em contato pelo e-mail{' '}
-              <a href="mailto:barbara.godinhop@gmail.com" className="text-blue-600 underline">
-                barbara.godinhop@gmail.com
+              <a href="mailto:contato@barbaragodinhoinvest.com.br" className="text-blue-600 underline">
+                contato@barbaragodinhoinvest.com.br
               </a>.
             </p>
           </section>
@@ -122,8 +123,8 @@ const PoliticaPrivacidade = ({ onClose }) => {
             <h3 className="font-semibold text-slate-800 mb-2">9. Contato</h3>
             <p>
               Dúvidas sobre esta política:{' '}
-              <a href="mailto:barbara.godinhop@gmail.com" className="text-blue-600 underline">
-                barbara.godinhop@gmail.com
+              <a href="mailto:contato@barbaragodinhoinvest.com.br" className="text-blue-600 underline">
+                contato@barbaragodinhoinvest.com.br
               </a>
             </p>
           </section>
