@@ -20,7 +20,7 @@ const Footer = () => {
     label: 'Contato',
     id: 'contact'
   }];
-  const services = ['Valuation de Empresas', 'Projeções Financeiras', 'Planejamento de Portfólio', 'Relatórios Personalizados', 'Análises Macroeconômicas'];
+  const services = ['Planejamento de Portfólio', 'Relatórios Personalizados', 'Análises Macroeconômicas'];
   const scrollToSection = sectionId => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -46,8 +46,8 @@ const Footer = () => {
             <Logo className="text-white" />
             <p className="text-sm text-slate-300 leading-relaxed">
               Consultora de valores mobiliários registrada na CVM e analista
-              certificada CNPI, especialista em valuation e planejamento de
-              investimentos, com MBA pela USP/ESALQ.
+              certificada CNPI, especialista em análise fundamentalista e
+              planejamento de investimentos, com MBA pela USP/ESALQ.
             </p>
             <div className="flex space-x-3 pt-2">
               <a href="https://www.linkedin.com/in/barbaragodinhoinvestimentos/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Bárbara Godinho" className="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">

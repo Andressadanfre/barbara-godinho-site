@@ -14,7 +14,7 @@ const schema = {
       jobTitle: 'Consultora de Valores Mobiliários e Analista CNPI',
       url: SITE_URL,
       knowsAbout: [
-        'Renda Fixa', 'Valuation', 'Modelagem Financeira',
+        'Renda Fixa', 'Planejamento de Investimentos',
         'Educação Financeira', 'Análise de Investimentos',
       ],
       hasCredential: [
@@ -40,7 +40,7 @@ const schema = {
       name: 'Bárbara Godinho Invest',
       url: SITE_URL,
       description:
-        'Consultoria de investimentos online para pessoa física em todo o Brasil. Consultora de valores mobiliários registrada na CVM e analista CNPI. Montagem e acompanhamento de carteira com análise fundamentalista, valuation e estratégia personalizada.',
+        'Consultoria de investimentos online para pessoa física em todo o Brasil. Consultora de valores mobiliários registrada na CVM e analista CNPI. Montagem e acompanhamento de carteira com análise fundamentalista e estratégia personalizada.',
       areaServed: { '@type': 'Country', name: 'Brasil' },
       provider: { '@id': `${SITE_URL}/#barbara` },
       sameAs: [
@@ -56,7 +56,7 @@ const schema = {
 export default function Seo() {
   const title = 'Bárbara Godinho — Consultoria de Investimentos Online | Consultora CVM e Analista CNPI';
   const description =
-    'Consultoria de investimentos online para pessoa física com Bárbara Godinho, consultora registrada na CVM e analista CNPI. Montagem e acompanhamento de carteira com análise fundamentalista e valuation. Atendimento em todo o Brasil.';
+    'Consultoria de investimentos online para pessoa física com Bárbara Godinho, consultora registrada na CVM e analista CNPI. Montagem e acompanhamento de carteira com análise fundamentalista. Atendimento em todo o Brasil.';
 
   return (
     <Helmet>

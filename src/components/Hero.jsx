@@ -107,7 +107,7 @@ const Hero = () => {
                 transition={{ duration: 0.6, delay: 1.2 }}
               >
                 <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mb-1 text-green-400" />
-                <div className="text-[10px] sm:text-xs font-semibold">Valuation</div>
+                <div className="text-[10px] sm:text-xs font-semibold">Carteira</div>
               </motion.div>
 
               <motion.div
@@ -117,7 +117,7 @@ const Hero = () => {
                 transition={{ duration: 0.6, delay: 1.4 }}
               >
                 <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mb-1 text-blue-400" />
-                <div className="text-[10px] sm:text-xs font-semibold">Modelagem</div>
+                <div className="text-[10px] sm:text-xs font-semibold">Patrimônio</div>
               </motion.div>
 
               <motion.div

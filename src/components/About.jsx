@@ -50,7 +50,7 @@ const About = () => {
             <div className="space-y-6 text-base sm:text-lg text-slate-700 leading-relaxed">
               <p>
                 Sou <strong>Analista de Investimentos CNPI</strong> e <strong>Consultora de Valores Mobiliários registrada na CVM</strong>, com MBA pela USP/ESALQ. 
-                Ofereço consultoria de investimentos online para pessoa física em todo o Brasil — desde a montagem da carteira até o acompanhamento contínuo, com base em análise fundamentalista e valuation.
+                Ofereço consultoria de investimentos online para pessoa física em todo o Brasil — desde a montagem da carteira até o acompanhamento contínuo, com base em análise fundamentalista.
               </p>
               
               <p>
