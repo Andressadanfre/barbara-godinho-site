@@ -162,12 +162,12 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           <motion.div
             ref={formCardRef}
-            className="bg-white rounded-2xl p-8 shadow-xl"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -331,12 +331,12 @@ const Contact = () => {
 
           <motion.div
             className="space-y-8"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl">
               <h3 className="text-2xl font-bold text-slate-800 mb-6">
                 Informações de Contato
               </h3>
@@ -351,17 +351,17 @@ const Contact = () => {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 shrink-0 gradient-bg rounded-lg flex items-center justify-center">
                       <info.icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <div className="text-sm text-slate-600 font-medium">
                         {info.title}
                       </div>
                       {info.link ? (
                         <a 
                           href={info.link}
-                          className="text-slate-800 hover:text-blue-600 transition-colors"
+                          className="text-slate-800 hover:text-blue-600 transition-colors break-all"
                         >
                           {info.value}
                         </a>
@@ -374,7 +374,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-6 sm:p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">
                 Resposta Rápida
               </h3>

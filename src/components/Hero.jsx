@@ -21,57 +21,28 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 pt-24 pb-16 sm:pt-32 sm:pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            className="text-white text-center lg:text-left"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+          <div className="text-white text-center lg:text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
               Consultoria de Investimentos{' '}
               <span className="block text-blue-200">Online para Pessoa Física</span>
-            </motion.h1>
+            </h1>
 
-            <motion.div
-              className="text-xl sm:text-2xl mb-4 text-blue-100"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
+            <div className="text-xl sm:text-2xl mb-4 text-blue-100">
               Bárbara Godinho • Consultora CVM e Analista CNPI • Atendimento Online
-            </motion.div>
+            </div>
 
-            <motion.p
-              className="text-lg sm:text-xl mb-8 text-blue-100 leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
+            <p className="text-lg sm:text-xl mb-8 text-blue-100 leading-relaxed">
               Ajudo investidores a construir patrimônio com método.
-            </motion.p>
+            </p>
 
-            <motion.p
-              className="text-base sm:text-lg mb-10 text-blue-50 leading-relaxed max-w-2xl mx-auto lg:mx-0"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
+            <p className="text-base sm:text-lg mb-10 text-blue-50 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Além de consultora, sou empresária: tenho duas lojas físicas em Uberlândia e um
               e-commerce. Sei o que é tomar decisão com o próprio dinheiro em jogo. Sou
               independente: não recebo comissão de nenhum produto. Monto e acompanho sua
               carteira pelo seu objetivo e perfil, com análise fundamentalista.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            >
+            <div>
               <Button
                 size="lg"
                 onClick={scrollToContact}
@@ -82,15 +53,10 @@ const Hero = () => {
               <p className="mt-3 text-sm text-blue-100/80">
                 Sem custo · Para patrimônio a partir de R$ 300 mil
               </p>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
-          <motion.div
-            className="relative mt-12 lg:mt-0"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
+          <div className="relative mt-12 lg:mt-0">
             <div className="relative">
               <img
                 className="w-full h-auto rounded-2xl shadow-2xl max-w-md mx-auto lg:max-w-full"
@@ -130,7 +96,7 @@ const Hero = () => {
                 <div className="text-[10px] sm:text-xs font-semibold">Estratégia</div>
               </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
