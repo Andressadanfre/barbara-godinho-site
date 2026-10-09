@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Logo = ({ className = "", size = "default" }) => {
+const Logo = ({ className = "", size = "default", inverted = false }) => {
   const sizeClasses = {
     small: "text-xl",
     default: "text-2xl",
@@ -15,10 +15,10 @@ const Logo = ({ className = "", size = "default" }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <span className="text-gradient">Bárbara</span>
-      <span className="text-slate-700 ml-2 font-light">Godinho</span>
-      <div className="text-xs font-normal text-slate-600 mt-1 tracking-wider">
-        ANALISTA CNPI
+      <span className={inverted ? "text-white" : "text-gradient"}>Bárbara</span>
+      <span className={`ml-2 font-light ${inverted ? "text-white/85" : "text-slate-700"}`}>Godinho</span>
+      <div className={`text-xs font-normal mt-1 tracking-wider ${inverted ? "text-white/75" : "text-slate-600"}`}>
+        CERTIFICADA CNPI
       </div>
     </motion.div>
   );
