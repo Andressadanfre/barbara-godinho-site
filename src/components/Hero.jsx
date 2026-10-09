@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { TrendingUp, BarChart3, Target } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -12,16 +10,16 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen gradient-bg relative overflow-hidden flex items-center">
+    <section id="home" className="min-h-screen gradient-bg relative overflow-hidden flex items-end">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-5 sm:top-20 sm:left-10 w-24 h-24 sm:w-32 sm:h-32 border border-white/30 rounded-full"></div>
         <div className="absolute top-20 right-5 sm:top-40 sm:right-20 w-16 h-16 sm:w-24 sm:h-24 border border-white/20 rounded-full"></div>
         <div className="absolute bottom-20 left-1/4 w-12 h-12 sm:w-16 sm:h-16 border border-white/25 rounded-full"></div>
       </div>
 
-      <div className="container mx-auto px-4 pt-24 pb-16 sm:pt-32 sm:pb-20 relative z-10">
+      <div className="container mx-auto px-4 pt-24 sm:pt-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white text-center lg:text-left">
+          <div className="text-white text-center lg:text-left lg:pb-20">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
               Consultoria de Investimentos{' '}
               <span className="block text-blue-200">Online para Pessoa Física</span>
@@ -56,46 +54,21 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative mt-12 lg:mt-0">
-            <div className="relative">
-              <img
-                className="w-full h-auto rounded-2xl shadow-2xl max-w-md mx-auto lg:max-w-full"
-                alt="Análise financeira profissional com gráficos e dados"
-                src="https://images.unsplash.com/photo-1620266757065-5814239881fd?w=1200&q=80&auto=format"
-                width="1200"
-                height="798"
-                fetchpriority="high" />
-
-              <motion.div
-                className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 md:-top-4 md:-left-4 transform -rotate-3 glass-effect rounded-lg sm:rounded-xl p-2 sm:p-3 text-white shadow-md"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 1.2 }}
-              >
-                <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mb-1 text-green-400" />
-                <div className="text-[10px] sm:text-xs font-semibold">Carteira</div>
-              </motion.div>
-
-              <motion.div
-                className="absolute -bottom-2 -right-2 sm:-bottom-3 sm:-right-3 md:-bottom-4 md:-right-4 transform rotate-3 glass-effect rounded-lg sm:rounded-xl p-2 sm:p-3 text-white shadow-md"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 1.4 }}
-              >
-                <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mb-1 text-blue-400" />
-                <div className="text-[10px] sm:text-xs font-semibold">Patrimônio</div>
-              </motion.div>
-
-              <motion.div
-                className="absolute top-1/3 -right-2 sm:top-1/4 sm:-right-3 md:top-1/3 md:-right-5 transform rotate-2 glass-effect rounded-lg sm:rounded-xl p-2 sm:p-3 text-white shadow-md"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 1.6 }}
-              >
-                <Target className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mb-1 text-purple-400" />
-                <div className="text-[10px] sm:text-xs font-semibold">Estratégia</div>
-              </motion.div>
-            </div>
+          <div className="relative mt-10 lg:mt-0 flex justify-center lg:justify-end lg:self-end">
+            <div
+              aria-hidden="true"
+              className="absolute left-1/2 top-[6%] -translate-x-1/2 w-[85%] aspect-square rounded-full bg-sky-300/30 blur-3xl"
+            />
+            <img
+              className="relative w-full max-w-[300px] sm:max-w-sm lg:max-w-md h-auto drop-shadow-[0_24px_40px_rgba(2,6,23,0.45)]"
+              src="/images/barbara-hero-1000.webp"
+              srcSet="/images/barbara-hero-600.webp 600w, /images/barbara-hero-1000.webp 1000w"
+              sizes="(min-width: 1024px) 448px, 300px"
+              alt="Bárbara Godinho, consultora de investimentos"
+              width="1000"
+              height="1529"
+              fetchpriority="high"
+            />
           </div>
         </div>
       </div>
