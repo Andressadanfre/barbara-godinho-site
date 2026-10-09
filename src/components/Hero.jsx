@@ -28,20 +28,20 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 pt-24 sm:pt-28 relative z-10">
-        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
           <div className="text-white text-center lg:text-left lg:pb-16">
             <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-3.5 py-1.5 text-xs sm:text-sm font-medium text-blue-100 mb-5 sm:mb-6">
               <span aria-hidden="true" className="h-2 w-2 rounded-full bg-sky-300" />
               Consultoria em todo o Brasil
             </p>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-[2.875rem] font-bold leading-[1.1] tracking-tight mb-4 sm:mb-5">
+            <h1 className="text-3xl sm:text-4xl lg:text-[2.875rem] font-bold leading-[1.1] tracking-tight mb-4 sm:mb-5 [text-wrap:balance]">
               Consultoria de investimentos{' '}
-              <span className="block text-blue-200">online para pessoa física</span>
+              <span className="block text-blue-200">independente para pessoa física</span>
             </h1>
 
             <p className="text-base sm:text-lg text-blue-100 leading-relaxed max-w-lg mx-auto lg:mx-0 mb-7 sm:mb-8">
-              Independente: não recebo comissão de produtos. Carteira montada pelo seu objetivo e perfil.
+              Sem comissão de produtos. Carteira montada pelo seu objetivo e perfil.
             </p>
 
             <div>
@@ -53,12 +53,12 @@ const Hero = () => {
                 Agendar conversa
               </Button>
               <p className="mt-3 text-sm text-blue-100/80">
-                Sem custo · Para patrimônio a partir de R$ 300 mil
+                Sem custo · Para patrimônio a partir de R$&nbsp;300&nbsp;mil
               </p>
             </div>
           </div>
 
-          <div className="relative mt-4 lg:mt-0 flex justify-center lg:self-end">
+          <div className="relative -mt-2 lg:mt-0 flex justify-center lg:self-end">
             <div
               aria-hidden="true"
               className="absolute left-1/2 top-0 -translate-x-1/2 w-[80%] aspect-square rounded-full bg-sky-300/30 blur-3xl"
