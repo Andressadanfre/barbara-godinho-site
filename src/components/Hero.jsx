@@ -35,13 +35,13 @@ const Hero = () => {
               Consultoria em todo o Brasil
             </p>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-[2.875rem] font-bold leading-[1.1] tracking-tight mb-4 sm:mb-5 [text-wrap:balance]">
+            <h1 className="text-[1.75rem] sm:text-4xl lg:text-[2.875rem] font-bold leading-[1.1] tracking-tight mb-4 sm:mb-5">
               Consultoria de investimentos{' '}
-              <span className="block text-blue-200">independente para pessoa física</span>
+              <span className="text-blue-200">independente</span>
             </h1>
 
             <p className="text-base sm:text-lg text-blue-100 leading-relaxed max-w-lg mx-auto lg:mx-0 mb-7 sm:mb-8">
-              Sem comissão de produtos. Carteira montada pelo seu objetivo e perfil.
+              Para pessoa física, sem comissão de produtos. Carteira montada pelo seu objetivo e perfil.
             </p>
 
             <div>
@@ -53,7 +53,8 @@ const Hero = () => {
                 Agendar conversa
               </Button>
               <p className="mt-3 text-sm text-blue-100/80">
-                Sem custo · Para patrimônio a partir de R$&nbsp;300&nbsp;mil
+                Sem custo · Para patrimônio
+                <span className="block">a partir de R$&nbsp;300&nbsp;mil</span>
               </p>
             </div>
           </div>
