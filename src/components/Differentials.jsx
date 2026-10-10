@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Brain, Target, BarChartHorizontalBig, HeartHandshake as Handshake } from 'lucide-react';
+import { Shield, Brain, Target, BarChartHorizontalBig } from 'lucide-react';
 
 const Differentials = () => {
   const differentials = [
     {
       icon: Shield,
       title: "Registro na CVM e certificação CNPI",
-      description: "Consultora de valores mobiliários registrada na CVM e analista CNPI credenciada pela APIMEC."
+      description: "Consultora de valores mobiliários registrada na CVM e certificada CNPI (nº 9901 – APIMEC)."
     },
     {
       icon: Brain,
@@ -23,11 +23,6 @@ const Differentials = () => {
       icon: BarChartHorizontalBig,
       title: "Método baseado em análise fundamentalista",
       description: "Avalio cada ativo pelos fundamentos e pelo papel que ele cumpre na sua carteira."
-    },
-    {
-      icon: Handshake,
-      title: "Independência total e ausência de conflito de interesse",
-      description: "Trabalho exclusivamente com honorário consultivo, sem comissões ou vínculos com produtos financeiros."
     }
   ];
 
@@ -50,7 +45,7 @@ const Differentials = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
           {differentials.map((differential, index) => (
             <motion.div
               key={index}
@@ -76,24 +71,6 @@ const Differentials = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Stats Section */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 mt-16 md:mt-20 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-white p-4">
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-200 mb-2">100%</div>
-            <div className="text-base sm:text-lg">Independência</div>
-          </div>
-          <div className="text-white p-4">
-            <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-200 mb-2">CNPI</div>
-            <div className="text-base sm:text-lg">Certificação Oficial</div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

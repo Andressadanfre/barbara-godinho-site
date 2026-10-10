@@ -39,7 +39,7 @@ const PoliticaPrivacidade = ({ onClose }) => {
             <h3 className="font-semibold text-slate-800 mb-2">1. Quem somos</h3>
             <p>
               Barbara Godinho Pereira, pessoa física, consultora de valores mobiliários registrada na
-              CVM e analista de valores mobiliários certificada (CNPI EM-9901/APIMEC), responsável pelo site{' '}
+              CVM e certificada CNPI (nº 9901 – APIMEC), responsável pelo site{' '}
               <strong>www.barbaragodinhoinvest.com.br</strong>.
             </p>
           </section>

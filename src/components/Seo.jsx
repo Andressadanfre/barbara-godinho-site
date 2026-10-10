@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 const SITE_URL = 'https://www.barbaragodinhoinvest.com.br';
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`; // criar depois (1200x630)
-const CNPI = 'EM-9901';
+const CNPI = '9901';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -11,7 +11,7 @@ const schema = {
       '@type': 'Person',
       '@id': `${SITE_URL}/#barbara`,
       name: 'Bárbara Godinho',
-      jobTitle: 'Consultora de Valores Mobiliários e Analista CNPI',
+      jobTitle: 'Consultora de Valores Mobiliários, certificada CNPI',
       url: SITE_URL,
       knowsAbout: [
         'Renda Fixa', 'Planejamento de Investimentos',
@@ -40,7 +40,7 @@ const schema = {
       name: 'Bárbara Godinho Invest',
       url: SITE_URL,
       description:
-        'Consultoria de investimentos online para pessoa física em todo o Brasil. Consultora de valores mobiliários registrada na CVM e analista CNPI. Montagem e acompanhamento de carteira com análise fundamentalista e estratégia personalizada.',
+        'Consultoria de investimentos independente para pessoa física em todo o Brasil. Consultora de valores mobiliários registrada na CVM e certificada CNPI (nº 9901 – APIMEC). Montagem e acompanhamento de carteira com análise fundamentalista e estratégia personalizada.',
       areaServed: { '@type': 'Country', name: 'Brasil' },
       provider: { '@id': `${SITE_URL}/#barbara` },
       sameAs: [
@@ -54,9 +54,9 @@ const schema = {
 };
 
 export default function Seo() {
-  const title = 'Bárbara Godinho — Consultoria de Investimentos Online | Consultora CVM e Analista CNPI';
+  const title = 'Bárbara Godinho — Consultoria de Investimentos Independente | Consultora CVM e Certificada CNPI';
   const description =
-    'Consultoria de investimentos online para pessoa física com Bárbara Godinho, consultora registrada na CVM e analista CNPI. Montagem e acompanhamento de carteira com análise fundamentalista. Atendimento em todo o Brasil.';
+    'Consultoria de investimentos independente para pessoa física, com consultora registrada na CVM e certificada CNPI. Carteira montada pelo seu objetivo e perfil. Atendimento online em todo o Brasil.';
 
   return (
     <Helmet>

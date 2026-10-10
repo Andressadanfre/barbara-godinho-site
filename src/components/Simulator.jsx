@@ -138,8 +138,8 @@ const Simulator = () => {
                         <div className="flex items-center gap-2">
                           {l.nome}
                           {l.melhor && (
-                            <span className="text-xs px-2 py-0.5 rounded-full bg-primary text-primary-foreground">
-                              Melhor
+                            <span className="text-xs px-2 py-0.5 rounded-full bg-primary text-primary-foreground whitespace-nowrap">
+                              Maior líquido
                             </span>
                           )}
                         </div>
@@ -156,7 +156,7 @@ const Simulator = () => {
           )}
 
           <p className="text-xs text-muted-foreground mt-6 text-center max-w-3xl mx-auto">
-            Simulação meramente ilustrativa, sem garantia de rentabilidade futura. Não constitui oferta ou recomendação de investimento. O ideal é que o investidor procure o consultor para definir a melhor estratégia de investimento.
+            Simulação meramente ilustrativa, sem garantia de rentabilidade futura. Não constitui oferta ou recomendação de investimento. O ideal é que o investidor procure o consultor para definir a estratégia mais adequada ao seu perfil.
           </p>
         </motion.div>
       </div>

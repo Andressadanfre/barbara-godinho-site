@@ -45,8 +45,8 @@ const Footer = () => {
         }}>
             <Logo className="text-white" />
             <p className="text-sm text-slate-300 leading-relaxed">
-              Consultora de valores mobiliários registrada na CVM e analista
-              certificada CNPI, especialista em análise fundamentalista e
+              Consultora de valores mobiliários registrada na CVM e certificada
+              CNPI, especialista em análise fundamentalista e
               planejamento de investimentos, com MBA pela USP/ESALQ.
             </p>
             <div className="flex space-x-3 pt-2">
@@ -145,8 +145,8 @@ const Footer = () => {
         >
           <p className="text-xs text-slate-500 leading-relaxed text-center sm:text-left">
             <strong className="text-slate-400">Aviso Legal:</strong> Bárbara Godinho Pereira é Consultora de
-            Valores Mobiliários registrada na CVM (Resolução CVM nº 19/2021) e Analista de Valores
-            Mobiliários certificada CNPI EM-9901, credenciada pela APIMEC (Resolução CVM nº 20/2021).
+            Valores Mobiliários registrada na CVM (Resolução CVM nº 19/2021) e
+            profissional certificada CNPI (nº 9901 – APIMEC).
             Os conteúdos deste site têm caráter informativo e educacional e não constituem oferta,
             recomendação individual ou promessa de rentabilidade. A consultoria é prestada de forma
             individualizada, mediante contratação e avaliação do perfil do cliente. Investimentos

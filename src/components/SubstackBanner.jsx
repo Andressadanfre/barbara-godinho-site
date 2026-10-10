@@ -25,7 +25,7 @@ const SubstackBanner = () => {
             </h2>
             <p className="text-lg text-white/80">
               Análises, estratégias e educação financeira para você investir
-              com mais segurança e clareza.
+              com mais clareza.
             </p>
           </div>
 
