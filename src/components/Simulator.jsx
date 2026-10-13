@@ -52,6 +52,35 @@ function simular({ capitalCents, dias, cdiAA, lciPctCdi }) {
   return linhas.map((l) => ({ ...l, melhor: l.total === max }));
 }
 
+const CAMPOS_CARD = [
+  { label: 'Taxa no período', valor: (l) => formatPct(l.taxaEf * 100) },
+  { label: 'IR pago', valor: (l) => formatBRL(l.ir) },
+  { label: 'Lucro líquido', valor: (l) => formatBRL(l.lucro) },
+];
+
+const ResultadoCard = ({ l }) => (
+  <div className={`rounded-xl border p-4 ${l.melhor ? 'border-primary/40 bg-primary/5' : 'bg-card'}`}>
+    <div className="flex items-center justify-between gap-2">
+      <span className="font-semibold">{l.nome}</span>
+      {l.melhor && (
+        <span className="text-xs px-2 py-0.5 rounded-full bg-primary text-primary-foreground whitespace-nowrap">
+          Maior líquido
+        </span>
+      )}
+    </div>
+    <p className="mt-3 text-xs text-muted-foreground">Total líquido</p>
+    <p className="text-2xl font-bold">{formatBRL(l.total)}</p>
+    <dl className="mt-3 pt-3 border-t space-y-1.5 text-sm">
+      {CAMPOS_CARD.map(({ label, valor }) => (
+        <div key={label} className="flex justify-between gap-2">
+          <dt className="text-muted-foreground">{label}</dt>
+          <dd>{valor(l)}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+);
+
 const Simulator = () => {
   const [valorInput, setValorInput] = useState('100.000');
   const [dias, setDias] = useState('360');
@@ -120,7 +149,14 @@ const Simulator = () => {
           </div>
 
           {resultado && (
-            <div className="overflow-x-auto rounded-xl border bg-card">
+            <>
+            <div className="md:hidden space-y-3">
+              {resultado.map((l) => (
+                <ResultadoCard key={l.nome} l={l} />
+              ))}
+            </div>
+
+            <div className="hidden md:block overflow-x-auto rounded-xl border bg-card">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b bg-muted/50">
@@ -153,6 +189,7 @@ const Simulator = () => {
                 </tbody>
               </table>
             </div>
+            </>
           )}
 
           <p className="text-xs text-muted-foreground mt-6 text-center max-w-3xl mx-auto">
